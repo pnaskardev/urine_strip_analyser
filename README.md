@@ -79,3 +79,8 @@ http://localhost:8000/analyse/
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
+
+## Authors
+
+- [@pnaskardev](https://www.github.com/pnaskardev)
+
