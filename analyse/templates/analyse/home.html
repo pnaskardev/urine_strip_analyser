@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+
     <title>Upload Files</title>
 </head>
 
@@ -23,7 +25,7 @@
         </div> -->
 
         <div class="form">
-            <form method='post' enctype="multipart/form-data">
+            <form method='post' id="DidDropzone" class="dropzone" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{form.as_p}}
                 <input type="submit" value="Submit">
