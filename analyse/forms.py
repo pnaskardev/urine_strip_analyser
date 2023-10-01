@@ -5,7 +5,6 @@ from .models import ImageModel
 class AnalyseForm(forms.ModelForm):
     image=forms.ImageField(
         label='Upload Image',
-        help_text='max. 42 megabytes'
     )
 
     class Meta:

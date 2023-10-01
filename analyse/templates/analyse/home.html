@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,15 +7,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'analyse/css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <title>Upload Files</title>
 </head>
 
 <body>
-    <form method='post' enctype="multipart/form-data">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Submit">
-    </form>
+    <h1>Urine Strip Analyser</h1>
+    <div class="main">
+        <!-- <div class="drop-zone">
+            <span class="drop-zone__prompt">Drop file here or click to upload</span>
+            <input type="file" name="myFile" class="drop-zone__input">
+        </div> -->
+
+        <div class="form">
+            <form method='post' enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- <input type="hidden" id="csrf-token" value="{% csrf_token %}"> -->
+
+        {% if image %}
+        <img src="{{ image.url }}" alt="image">
+        {% endif %}
+        {% if res %}
+        <p>The result is: {{ res }}</p>
+        {% endif %}
+    </div>
+
+    <div id="api-response"></div>
+    <div id="warning-message" style="display: none;">Please upload a file before submitting</div>
+    <script src="{% static 'analyse/js/scripts.js' %}"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
