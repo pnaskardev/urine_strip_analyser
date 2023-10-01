@@ -19,7 +19,8 @@ The Backend is built with the help of Django.
 The main methodology that has been used can be divided into 2 parts :-
 
 1. **Cropping** - to get the useful part of the image.
-2. **Segmentation** - small segments of 10x10 are used to get the average RGB value of each segment.
+2. **PreProcessing** - A billinear extrapolator is used to replace value of each pixel with the average value of the row to remove artifacts like granular noise and dark patches
+3. **Segmentation** - small segments of 10x10 are used to get the average RGB value of each segment.
 
 ## Installation
 
