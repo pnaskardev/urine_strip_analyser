@@ -1,0 +1,23 @@
+body{
+    background-color: antiquewhite;
+    display: flex;
+}
+
+.main{
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main > img{
+    width: 100px;
+    height: 400px;
+    border-radius: 10px;
+}
