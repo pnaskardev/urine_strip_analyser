@@ -21,7 +21,6 @@ The main methodology that has been used can be divided into 2 parts :-
 1. **Cropping** - to get the useful part of the image.
 2. **PreProcessing** - A billinear extrapolator is used to replace value of each pixel with the average value of the row to remove artifacts like granular noise and dark patches
 3. **Segmentation** - small segments of 10x10 are used to get the average RGB value of each segment.
-
 ## Installation
 
 1. Clone this repository using
@@ -30,21 +29,36 @@ The main methodology that has been used can be divided into 2 parts :-
    git clone https://github.com/pnaskardev/urine_strip_analyser.git
    ```
 
-2. Navigate to the backend folder,install the required dependencies and start the webserver on port 8000
+2. Navigate to the project folder,install the required dependencies and start the webserver on port 8000
 
    ```
    cd urine_strip_analyser
-   pip install -r requirements.txt
+   pip install virtualenv
    ```
 
-3. Start the server
+3. create a virtual environment(**For Windows OS users**)
+    ```
+   python -m venv venv
+   venv\Scripts\activate
+   
+   ```
+4. create a virtual environment(**For Linux/MacOS users**)
+    ```
+   virtualenv venv
+   source venv/bin/activate
+   ```
+5. Install all the dependencies
+   ```
+   pip install -r requirements.txt
+   ```
+6. Start the server
     ```
    python manage.py makemigrations
    python manage.py migrate
    python manage.py runserver
    ```
 
-4. Navigate to for testing
+5. Navigate to for testing
     ```
    http://localhost:8000/analyse/
    ```
