@@ -78,7 +78,10 @@ http://localhost:8000/analyse/
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![image](https://github.com/pnaskardev/urine_strip_analyser/assets/71266237/3228077c-bbb9-4ead-9140-83e23b125888)
+![image](https://github.com/pnaskardev/urine_strip_analyser/assets/71266237/66fa0382-0b38-4bde-b676-f1b088910f97)
+
+
 
 
 ## Authors
